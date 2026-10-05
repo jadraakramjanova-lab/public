@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Public API Explorer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Neon fon elementlari -->
+    <div class="neon-line line-one"></div>
+    <div class="neon-line line-two"></div>
+
+    <!-- Yuqori menyu -->
+    <header class="navbar">
+
+        <div class="logo">
+            <span class="logo-symbol">&lt;/&gt;</span>
+            <span>API <b>Explorer</b></span>
+        </div>
+
+        <nav>
+            <a href="#bosh-sahifa">Bosh sahifa</a>
+            <a href="#api-lar">API lar</a>
+            <a href="#haqida">Haqida</a>
+        </nav>
+
+    </header>
+
+
+    <!-- Bosh sahifa -->
+    <main>
+
+        <section id="bosh-sahifa" class="hero">
+
+            <div class="hero-content">
+
+                <p class="small-title">OMMAVIY API KATALOGI</p>
+
+                <h1>
+                    API olamini
+                    <span>kashf eting.</span>
+                </h1>
+
+                <p class="hero-text">
+                    Dasturlash loyihalaringiz uchun kerakli ommaviy
+                    API larni izlang, o‘rganing va foydalaning.
+                </p>
+
+                <a href="#api-lar" class="gold-button">
+                    API larni ko‘rish
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- API bo‘limi -->
+        <section id="api-lar" class="api-section">
+
+            <div class="section-heading">
+
+                <div>
+                    <p class="small-title">KATALOG</p>
+                    <h2>Ommaviy API lar</h2>
+                </div>
+
+                <div class="api-count">
+                    <span id="apiCount">0</span>
+                    ta API
+                </div>
+
+            </div>
+
+
+            <!-- Qidiruv -->
+            <div class="search-panel">
+
+                <div class="search-box">
+
+                    <span>⌕</span>
+
+                    <input
+                        type="text"
+                        id="searchInput"
+                        placeholder="API nomini qidiring..."
+                    >
+
+                </div>
+
+
+                <select id="categorySelect">
+
+                    <option value="all">Barcha kategoriyalar</option>
+
+                </select>
+
+            </div>
+
+
+            <!-- Yuklanish -->
+            <div id="loading" class="loading">
+
+                <div class="loader"></div>
+
+                <p>API lar yuklanmoqda...</p>
+
+            </div>
+
+
+            <!-- API kartalari -->
+            <div id="apiGrid" class="api-grid"></div>
+
+
+            <!-- Xatolik -->
+            <div id="errorMessage" class="error-message hidden">
+
+                <h3>Ma’lumotlarni yuklab bo‘lmadi</h3>
+
+                <p>
+                    Internet aloqangizni tekshiring va qayta urinib ko‘ring.
+                </p>
+
+                <button id="retryButton" class="gold-button">
+                    Qayta urinish
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Haqida -->
+        <section id="haqida" class="about-section">
+
+            <div class="about-card">
+
+                <p class="small-title">LOYIHA HAQIDA</p>
+
+                <h2>Public API Explorer</h2>
+
+                <p>
+                    Ushbu loyiha dasturchilarga ommaviy API larni
+                    tez topish, ularning imkoniyatlarini ko‘rish
+                    va loyihalarida foydalanish uchun qulay muhit yaratadi.
+                </p>
+
+                <div class="about-features">
+
+                    <div>
+                        <strong>01</strong>
+                        <span>Qidiruv</span>
+                    </div>
+
+                    <div>
+                        <strong>02</strong>
+                        <span>Kategoriyalar</span>
+                    </div>
+
+                    <div>
+                        <strong>03</strong>
+                        <span>Batafsil ma’lumot</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- Batafsil ma'lumot oynasi -->
+    <div id="modal" class="modal hidden">
+
+        <div class="modal-content">
+
+            <button id="closeModal" class="close-button">
+                ×
+            </button>
+
+            <p class="small-title">API MA’LUMOTI</p>
+
+            <h2 id="modalTitle">API nomi</h2>
+
+            <p id="modalDescription">
+                API tavsifi
+            </p>
+
+            <div class="modal-info">
+
+                <div>
+                    <span>Kategoriya</span>
+                    <strong id="modalCategory">—</strong>
+                </div>
+
+                <div>
+                    <span>HTTPS</span>
+                    <strong id="modalHttps">—</strong>
+                </div>
+
+                <div>
+                    <span>Avtorizatsiya</span>
+                    <strong id="modalAuth">—</strong>
+                </div>
+
+            </div>
+
+            <a
+                id="modalLink"
+                href="#"
+                target="_blank"
+                class="gold-button"
+            >
+                API saytiga o‘tish →
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-line"></div>
+
+        <p>
+            Public API Explorer
+        </p>
+
+        <p class="author">
+            Muallif:
+            <span>Akramjanova Jadra Maratovna</span>
+        </p>
+
+        <p class="copyright">
+            © 2026 Barcha huquqlar himoyalangan.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
